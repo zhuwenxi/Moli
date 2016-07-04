@@ -55,24 +55,23 @@ abstract class TestSuite {
 	
 	public Object expectValue;
 	
-	protected TestSuite expect(String expectValue) {
+	protected TestSuite expect(Object expectValue) {
 		this.expectValue = expectValue;
 		return this;
 	}
 	
-	protected void toBe(String toBeValue) {
-		String expect = (String)(this.expectValue);
+	protected void toBe(Object toBeValue) {
 		if (this.expectValue == null) {
 			if (toBeValue == null) {
 				meetSuccessCase();
 			} else {
-				meetFailCase(expect, toBeValue);
+				meetFailCase(this.expectValue, toBeValue);
 			}
 		} else {
-			if (((String)(this.expectValue)).equals(toBeValue)) {
+			if (this.expectValue.equals(toBeValue)) {
 				meetSuccessCase();
 			} else {
-				meetFailCase(expect, toBeValue);
+				meetFailCase(this.expectValue, toBeValue);
 			}
 		}
 	}
@@ -81,7 +80,7 @@ abstract class TestSuite {
 		meetSuccessOrFailCase(true, this.desc);
 	}
 	
-	private void meetFailCase(String expectValue, String toBeValue) {
+	private void meetFailCase(Object expectValue, Object toBeValue) {
 		String failMessage = String.format("%1s:\n    expect %2s to be %3s.", this.desc, expectValue, toBeValue);
 		meetSuccessOrFailCase(false, failMessage);
 	}
