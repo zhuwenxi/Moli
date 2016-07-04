@@ -32,6 +32,10 @@ public abstract class TestSuites {
 		this.successCases.addAll(suite.successCases);
 		this.failCases.addAll(suite.failCases);
 	}
+	
+	protected void xit(String desc, TestSuite suite) {
+		// Do nothing.
+	}
 }
 
 abstract class TestSuite {

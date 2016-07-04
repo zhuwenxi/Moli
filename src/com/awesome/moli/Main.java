@@ -10,7 +10,9 @@ public class Main {
 
 					public void run() {
 						expect("aa").toBe("aa");
+						expect("aa").toBe("aa");
 					}
+					
 					
 				});
 				
@@ -22,10 +24,18 @@ public class Main {
 					
 				});
 				
-				it("testcase 2", new TestSuite() {
+				it("testcase 3", new TestSuite() {
 
 					public void run() {
 						expect(1).toBe(1);
+					}
+					
+				});
+				
+				it("testcase 4", new TestSuite() {
+
+					public void run() {
+						expect(null).toBe(null);
 					}
 					
 				});
