@@ -26,8 +26,8 @@ public abstract class TestSuites {
 		suite.desc = desc;
 		suite.run();
 	
-		successCaseNumber += suite.successCaseNumber;
-		failCaseNumber += suite.failCaseNumber;
+		successCaseNumber += suite.successCaseNumber > 0 ? 1 : 0;
+		failCaseNumber += suite.failCaseNumber > 0 ? 1 : 0;
 		
 		this.successCases.addAll(suite.successCases);
 		this.failCases.addAll(suite.failCases);

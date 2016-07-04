@@ -9,8 +9,8 @@ public class Main {
 				it("testcase 1", new TestSuite() {
 
 					public void run() {
-						expect("aa").toBe("aa");
-						expect("aa").toBe("aa");
+						expect("aa").toBe("b");
+						expect("aa").toBe("a");
 					}
 					
 					
