@@ -1,4 +1,6 @@
-package com.awesome.moli;
+import com.awesome.moli.Moli;
+import com.awesome.moli.TestSuite;
+import com.awesome.moli.TestSuites;
 
 public class Main {
 	public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package com.awesome.moli;
 
-import java.util.List;
-
 public class Moli {
 	
 	private Moli() {
